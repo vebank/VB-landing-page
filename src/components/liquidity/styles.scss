@@ -1,0 +1,134 @@
+.add-liquidity {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-liquidity-header-modal {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem 2rem 2rem 1.5rem;
+}
+
+.add-liquidity-header-modal * {
+  display: flex;
+}
+
+.add-liquidity-header-modal .btn-modal-back {
+  background: url("../../assets/images/buttons/ic_back_white.svg") no-repeat
+    center center;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+  // left: 24;
+  border: none;
+  cursor: pointer;
+}
+
+.input-asset {
+  @apply mt-4 px-4 py-6 text-[#3EE8FF] font-bold text-2xl border border-[#4F92A7] rounded-lg bg-transparent;
+}
+
+.liquid-wrapper {
+  @apply border-2 border-[#4F92A7] rounded-lg;
+}
+
+.price-pool-item {
+  @apply flex flex-col px-4 space-y-2 items-center
+}
+
+.price-pool-item .value {
+  @apply text-lg
+}
+
+.price-pool-item .label {
+  @apply text-base
+}
+
+.price-pool-share-row {
+  @apply flex flex-row flex-1 justify-between items-center;
+}
+
+.price-pool-share-row p {
+  @apply text-base
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #182d52 0%, #172130 100%);
+  z-index: 99900;
+}
+
+.loading {
+  width: 16px;
+  height: 16px;
+  border: solid 2px white;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.loading__exchange__rate {
+  width: 20px;
+  height: 20px;
+  border: solid 2px #02A4FF;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.liquid-lp-btn-border {
+  position: absolute;
+  overflow: visible;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  fill: none;
+  stroke: url(#gradLiquidLpBtnBorder);
+  stroke-width: 1px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

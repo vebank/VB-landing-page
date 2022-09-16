@@ -1,0 +1,579 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./animation.scss";
+@import "./modal.scss";
+@import "./toastify.scss";
+@import "./lauchpad.scss";
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Poppins"),
+    url("https://fonts.cdnfonts.com/s/16009/Poppins-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Poppins-Light"),
+    url(../fonts/poppins/Poppins-Light.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Poppins-Medium"),
+    url(../fonts/poppins/Poppins-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Poppins-SemiBold"),
+    url(../fonts/poppins/Poppins-SemiBold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: local("Poppins-Bold"),
+    url(../fonts/poppins/Poppins-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat"),
+    url(../fonts/montserrat/montserrat-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  src: local("sf-pro-display"),
+    url(../fonts/sf-pro-display/0b51833ff62e4af8acb5fd3e2bf59e97.woff)
+      format("woff");
+}
+
+@font-face {
+  font-family: "Nebula";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Nebula"), url(../fonts/nebula/Nebula-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Blank Space";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Blank Space"),
+    url(../fonts/blank-space/BlankSpace-Eaggz.woff) format("woff");
+}
+@font-face {
+  font-family: "Safety";
+  font-style: normal;
+  font-weight: 200;
+  src: local("Safety"),
+    url(../fonts/safety/SafetyMedium.woff) format("woff");
+}
+html {
+  font-size:.875rem;
+}
+
+@media (max-width: 1920px) {
+  html { font-size:  .875rem; }
+}
+
+@media (max-width: 1440px) {
+  html { font-size:  .875rem; }
+}
+
+@media (max-width: 1024px) {
+  html { font-size: .75rem; }
+}
+
+header {
+  background: rgba(13, 21, 34, 0.5);
+  backdrop-filter: blur(100px);
+}
+.navbar-sub-menu {
+  background: rgba(13, 21, 34, 0.5);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  border-radius: 8px;
+}
+
+header::before, .navbar-sub-menu::before {
+  backdrop-filter: blur(100px);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.row {
+  @apply flex flex-row
+}
+
+.col {
+  @apply flex flex-col
+}
+
+.full-col {
+  @apply col flex-1
+}
+
+.row-center {
+  @apply row items-center
+}
+
+.col-y-center {
+  @apply col justify-center
+}
+
+.col-x-center {
+  @apply col items-center
+}
+
+.col-center {
+  @apply col justify-center items-center
+}
+
+.full-col-y-center {
+  @apply full-col justify-center
+}
+
+.full-row-center {
+  @apply row flex-1 items-center
+}
+
+.full-row-between-center {
+  @apply full-row-center justify-between
+}
+
+.full-row-center-center {
+  @apply full-row-center justify-center
+}
+
+.hero__img {
+  width: 30rem;
+}
+
+.bg-gradient-custom {
+  @apply bg-gradient-to-r from-blue-900 to-blue-500 text-white;
+}
+
+.bg-gradient-search {
+
+  background: #334158;
+  backdrop-filter: blur(30px);
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(132, 104, 168, 0.108) 0%,
+  //   rgba(132, 104, 168, 0.108) 54.47%,
+  //   rgba(132, 104, 168, 0.108) 100%
+  // );
+
+}
+
+.bg-gradient-lend {
+  background: radial-gradient(50% 50% at 50% 50%, #7fc04b 0%, #79c550 100%);
+}
+
+.bg-gradient-range-amount {
+  background: linear-gradient(90deg, #7ade57 0%, #de3a2c 100%);
+}
+
+.bg-gradient-range-positive{
+  background: linear-gradient(90deg, #7ade57 0%, #de3a2c 100%);
+}
+
+.bg-gradient-range-negative{
+  background: linear-gradient(90deg, #de3a2c 0%, #7ade57 100%);
+}
+
+
+.bg-gradient-border {
+  border: 2px solid rgba(35, 210, 126, 1);
+}
+
+.border-input-modal{
+ border: 2px solid #4F92A7;
+}
+
+.bg-content {
+  background: linear-gradient(109.17deg, #182D52 0%, #172130 100%);
+}
+
+.btn-modal-veb {
+  text-align: center;
+  padding: 0.5rem 1.25rem;
+  background-color: #2a364b;
+  display: block;
+  @apply disabled:text-grey-7 h-16 rounded-lg text-grey-1 text-lg font-poppins_medium
+}
+
+.btn-modal-secondary {
+  padding: 0.5rem 2.5rem;
+}
+
+// Set for the gradient stroke svg tag
+.svg-bg {
+  position: absolute;
+  overflow: visible;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  fill: none;
+  stroke: url(#grad1);
+  stroke-width: 1px;
+}
+
+.bg-btn-veb {
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+}
+
+.bg-btn-veb-disabled {
+  background: theme('colors.vbDisabled') !important;
+  color: theme('colors.vbDisableText') !important;
+}
+
+.bg-success {
+  background: #A0D911;
+}
+
+.bg-pending {
+  background: #fa8c16;
+}
+
+.btn-connect-wallet {
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 32px;
+  padding-left: 2.625rem;
+  padding-right: 2.625rem;
+  font-family: "Poppins";
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+}
+
+.btn-connect-wallet:hover {
+  background: linear-gradient(
+    91.96deg,
+    rgb(51 181 118 / 75%) 0%,
+    rgb(23 129 188 / 75%) 100%
+  );
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-veb {
+  padding: 0.3rem 1.65rem;
+  font-weight: 500;
+  border-radius:4px;
+  font-family: "Poppins";
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+  @apply text-sm;
+}
+
+.btn-veb-swap {
+  padding: 0.3rem 1.65rem;
+  font-weight: 500;
+  border-radius:4px;
+  font-family: "Poppins";
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+  @apply text-base;
+}
+
+.btn-veb-add-token {
+  font-weight: 500;
+  border-radius:4px;
+  font-family: "Poppins";
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+  color: white;
+  @apply text-base;
+}
+.btn-veb-add-token-disabled {
+  font-weight: 500;
+  border-radius:4px;
+  font-family: "Poppins";
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: theme('colors.vbDisabled') !important;
+  color: theme('colors.vbDisableText') !important;
+  @apply text-base;
+}
+
+.box-borrows {
+  // background-image: url("https://s3-alpha-sig.figma.com/img/9160/0636/26ab7f857c705901a4766c266054b4c4?Expires=1651449600&Signature=QL10LsIfIX8eZs1ROr0naGEuDEbjpcKFikjnZjbJl7aE~j22-c7oHehsQjMbDEerrFEtHATRd1FiLncaMaH7lD9Xi1xRw~uuVLzZen~hvEzgMUaMEyi0gzuMKYTbgWyvZVsxjZk4jJHo~piMQov8R1YnWRphxTnPjcJjw6fnAHEs24WwzUoowGuM4whGOyHfinaAmsJuW9cB-nHi1P0Vn4lULUYO6puSf7TnDNEvSlVQwskyC6Hlle3pG-d6rbzR1~Yg297YYZl8AV1o7E0rCx-TFWe4Q6RvhlyqAUVcvVXx-XTpqaHVScfgA-p~OydE61AAhhxXv8u~-StjVPaR4A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA");
+  background-size: 56%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.btn {
+  @apply uppercase font-bold px-10 py-4 rounded inline-flex;
+}
+
+footer {
+  background-color: #051338;
+}
+
+.img-scale-1-1 {
+  transition: all 0.2s ease-in-out;
+}
+
+.img-scale-1-1:hover {
+  transform: scale(1.1);
+}
+
+.navigation {
+  /* fixed keyword is fine too */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  // position: fixed;
+  // top: 0;
+  // transition-timing-function: ease-in;
+  // transition: 0.5s;
+  // background-color: #00051ec4;
+  // -webkit-transition: background-color 800ms linear;
+  // -ms-transition: background-color 800ms linear;
+  // transition: background-color 800ms linear;
+
+  /* z-index works pretty much like a layer:
+    the higher the z-index value, the greater
+    it will allow the navigation tag to stay on top
+    of other tags */
+}
+
+.tab-market {
+  width: fit-content;
+  height: auto;
+  border: 1px solid #d2c0f14d;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 3px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.tab-market a {
+  font-family: "Poppins";
+  line-height: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  margin: 1px;
+  padding: 0.2rem 2rem;
+  display: inline-block;
+}
+
+.tab-market .active {
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+  border-radius: 4px;
+}
+
+.launchpad-filter-tab {
+  width: fit-content;
+  height: auto;
+  border: 1px solid #d2c0f14d;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 4px;
+  border-radius: 24px;
+}
+
+.launchpad-filter-tab a {
+  font-family: "Poppins";
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.45rem 1.5rem;
+  display: inline-block;
+}
+
+.launchpad-filter-tab .active {
+  background: linear-gradient(91.96deg, #0fe3e3 0%, #02a4ff 100%);
+  border-radius: 24px;
+}
+
+.box_home {
+  background-image: url("../images/home/bg_home.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-position: center;
+  overflow: hidden;
+}
+
+.box-border-gr {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 1px 3px #39c5f1;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.blend-dodge {
+  mix-blend-mode: color-dodge;
+}
+
+.box_home-round {
+  background-image: url("../images/home/bg_round.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-blend-mode: color-dodge;
+  height: 500px;
+  min-width: 500px;
+}
+
+.box_home-round img {
+  mix-blend-mode: dodge;
+}
+
+.bg-light-shadow {
+  box-shadow: 0 0 40px 2px rgb(0 255 255 / 30%);
+}
+
+.bg-overview {
+  background: linear-gradient(116.38deg, #0db6ff 16.58%, #2183e0 83.42%);
+}
+
+.bg-layout-vb{
+  background: linear-gradient(109.17deg, #182D52 0%, #172130 100%);
+}
+
+.bg-tbl-vb{
+  background: #0D1522;
+}
+
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
+
+.text-linear {
+  @apply text-transparent bg-gradient-to-r from-secondary to-primary bg-clip-text;
+}
+
+.farm {
+  &__tab {
+    border: 1px solid #d2c0f14d;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    .active {
+      background: linear-gradient(91.96deg, #0FE3E3 0%, #02A4FF 100%);
+      border-radius: 32px;
+    }
+  }
+}
+
+.vb-modal-overlay {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-remove-liquid {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.add-liquid-list-select-token {
+  ::-webkit-scrollbar {
+    padding: 24px 32px;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+  }
+  ::-webkit-scrollbar-thumb {
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(91.96deg, #0FE3E3 0%, #02A4FF 100%);
+    border-radius: 24px;
+  }
+}
+
+/* only for demo purpose variants and utilities are generated with the plugin https://github.com/batistein/tailwindcss-border-gradient-radius */
+.border-gradient-br-blue-green-gray-900 {
+  background: linear-gradient(to right, rgb(24, 34, 51), rgb(24, 34, 51)),
+    linear-gradient(to bottom right, #0de2e3, #03a5ff);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.hover\:border-gradient-tl-blue-green-gray-900:hover {
+  background: linear-gradient(to right, rgb(24, 34, 51), rgb(24, 34, 51)),
+    linear-gradient(to top left, #0de2e3, #03a5ff);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.gradient-border-2 {
+  border: 2px solid transparent;
+}

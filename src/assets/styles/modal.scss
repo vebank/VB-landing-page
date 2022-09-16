@@ -1,0 +1,71 @@
+.ReactModalPortal > * {
+  // When the modal is closed, overlay div has no css class
+  // This selector should be overridden by the `&--after-open` class below
+  opacity: 0;
+}
+
+.ReactModal__Overlay {
+  transition: opacity 300ms ease-in-out;
+
+  &--after-open {
+    opacity: 1;
+  }
+
+  &--before-close {
+    opacity: 0;
+  }
+}
+
+.overlay-lur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0 0 0 / 75%);
+  z-index: 999;
+}
+
+.modal-veb .header-modal {
+  position: relative;
+}
+
+.modal-veb .header {
+  @apply flex flex-row flex-1 items-center justify-between
+
+}
+
+.modal-veb .header h2 {
+  @apply font-poppins_medium text-grey-1 text-3xl
+}
+
+.modal-veb .header-modal h2 {
+  width: 100%;
+  padding: 25px;
+  font-family: "Poppins";
+  font-size: 18px;
+  line-height: 36px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.modal-veb .header-modal .btn-modal-close {
+  background: url("../images/buttons/ic_close.svg") no-repeat center center;
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+  border: none;
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  cursor: pointer;
+}
+
+.modal-veb .content-modal {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.modal-veb .footer-modal {
+  position: relative;
+}
